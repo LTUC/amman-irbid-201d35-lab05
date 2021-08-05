@@ -142,7 +142,7 @@ let product = 1 ;
 
 for(let i = 0; i < dynamicArray.length ; i++){
 
-     product = multiply(product, dynamicArray[i]);
+     product = multiply(product, dynamicArray[i])[0];
 }let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${product}.`
 
 
