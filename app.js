@@ -10,6 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
     let sum = a + b;
     return [sum,`The sum of ${a} and ${b} is ${sum}.`]
+    // return [sum];[0]
 }
 // Here is the test for sum(); uncomment it to run it
  testSum(4, 7);
@@ -25,10 +26,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let multiply = a * b;
+    return[multiply,`The product of ${a} and ${b} is ${multiply}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -44,10 +47,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    let s = sum(a,b)[0];
+    let s2 = sum(c,s)[0];
+    let m = multiply(a,b)[0];
+    let m2 = multiply(c,m)[0];
+
+    let message = `${a} and ${b} and ${c} sum to ${s2}.`
+    let massage2 = `The product of ${a} and ${b} and ${c} is ${m2}.`
+
+
+   return [s2,m2,message,massage2];     
+
+    
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,13 +78,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4];
-
+//              [0,  1, 2];
+//              [a , b , c]
 function sumArray(sumArr) {
+    
+    let s1= sum(testArray[0],testArray[1])[0];
+    let s2 = sum(testArray[2],s1)[0];
+    let msg = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${s2} is their sum.`;
+
+    return [s2,msg];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
