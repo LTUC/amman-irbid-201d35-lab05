@@ -82,11 +82,11 @@ let testArray = [2, 3, 4];
 //              [a , b , c]
 function sumArray(sumArr) {
     
-    // let s1= sum(testArray[0],testArray[1])[0];
-    // let s2 = sum(testArray[2],s1)[0];
-    // let msg = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${s2} is their sum.`;
+    let s1= sum(testArray[0],testArray[1])[0];
+    let s2 = sum(testArray[2],s1)[0];
+    let msg = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${s2} is their sum.`;
 
-    // return [s2,msg];
+    return [s2,msg];
 
 }
 
