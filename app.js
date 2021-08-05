@@ -16,6 +16,12 @@ function sum(a, b) {
 testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
+// my sum function
+function mySum(a, b) {
+    let sum = a + b;
+    let massage = `The sum of ${a} and ${b} is ${sum}.`
+    return sum
+}
 /////////////////////////////////////
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
@@ -35,6 +41,12 @@ function multiply(a, b) {
 testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
+// my multiply function
+function myMultiply(a, b) {
+    let multi = a * b;
+    
+    return multi
+}
 /////////////////////////////////////
 /* Problem 3
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
@@ -48,8 +60,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum = a + b + c;
-    let multi = a * b *c;
+    // let sum = a + b + c;
+    let sum = mySum(a, b);
+    let sum1 = mySum(sum, c)
+     sum =sum1;
+    // let multi = a * b *c;
+    let multi = myMultiply(a, b);
+    let multi1 = myMultiply(multi, c)
+     multi = multi1;
     let massageOne = `${a} and ${b} and ${c} sum to ${sum}.`
     let massageTow = `The product of ${a} and ${b} and ${c} is ${multi}.`
     return [sum, multi, massageOne, massageTow]
@@ -74,9 +92,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-    let sum =0;
+    let sum = 0 ;
     for(let i=0; i<sumArr.length; i++){
-     sum = sum + sumArr[i];
+     sum = mySum(sum,sumArr[i]);
+     sum =sum;
     }
     let massage = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`
     return [sum, massage]
@@ -102,7 +121,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {
     let multi = 1;
     for(let i = 0; i < multArr.length; i++){
-        multi = multi * multArr[i];
+        multi = myMultiply(multi, multArr[i])
+        multi = multi;
     }
     
     let massage = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`
@@ -134,9 +154,18 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5];
 
 function multiplyAnyArray(dynamicArray) {
+    if(dynamicArray.length != 0 && dynamicArray.length > 0){
+        let multi = 1;
+    for(let i = 0; i < dynamicArray.length; i++){
+        multi = myMultiply(multi, dynamicArray[i])
+        multi = multi;
+    }
+    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi}.`
+    return[multi, message]
+    }
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
