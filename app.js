@@ -86,8 +86,14 @@ Test this function by hand in the console to get it working, and when you think 
   
  // Write your code here
  let testArray = [2, 3, 4]; 
-
+ function sumArray(sumArr) {
+    for(let i = 0 ; i< testArray.length ;i++){
+   let firstElement =  sum(sum(testArray[0],testArray[1])[0],testArray[2])[0]
+   let secondElement = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${firstElement} is their sum.`;
+   //console.log(firstElement ,secondElement );
+return[firstElement , secondElement];
 }
+ }
   
  // Here is the test for sumArray(); uncomment it to run it
   
