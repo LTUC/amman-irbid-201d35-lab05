@@ -77,9 +77,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-    let sum4 = sum(testArray[0], testArray[1])[0];
-    sum4 = sum(sum4, testArray[2])[0];
-    let message5th = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum4} is their sum.`;
+    let sum4 = sum(sumArr[0], sumArr[1])[0];
+    sum4 = sum(sum4, sumArr[2])[0];
+    let message5th = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum4} is their sum.`;
     return [sum4, message5th];
 }
 
@@ -101,9 +101,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-    let multi5 = multiply(testArray[0], testArray[1])[0];
-    multi5 = multiply(multi5, testArray[2])[0];
-    let message6th = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multi5}.`;
+    let multi5 = multiply(multArr[0], multArr[1])[0];
+    multi5 = multiply(multi5, multArr[2])[0];
+    let message6th = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi5}.`;
     return [multi5, message6th];
 }
 
@@ -132,9 +132,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5];
 
 function multiplyAnyArray(dynamicArray) {
+    let multi6 = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+        multi6 = multiply(multi6, dynamicArray[i])[0];
+    }
+    let message7th = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi6}.`;
+    return [multi6, message7th];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
