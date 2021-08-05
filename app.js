@@ -92,7 +92,7 @@ function sumArray(sumArr) {
 
 // Here is the test for sumArray(); uncomment it to run it
 
- //testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -108,10 +108,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+    let m1= multiply(testArray[0],testArray[1])[0];
+    let m2 = multiply(testArray[2],m1)[0];
+    let msge = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${m2}.`;
+
+    return [m2,msge];
+    
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
