@@ -101,10 +101,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+    let multi5 = multiply(testArray[0], testArray[1])[0];
+    multi5 = multiply(multi5, testArray[2])[0];
+    let message6th = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multi5}.`;
+    return [multi5, message6th];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
