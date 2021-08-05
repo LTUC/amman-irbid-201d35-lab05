@@ -48,11 +48,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum = a+b+c;
-    let multi = a*b*c;
-    let message1 = `${a} and ${b} and ${c} sum to ${sum}.`
-    let message2 = `The product of ${a} and ${b} and ${c} is ${multi}.`
-    return[sum,multi,message1,message2];
+    let s =sum(a,b)[0];
+    sum(s,c)[0];
+    let m = multiply(a,b)[0];
+    multiply(m,b)[0];
+    let message1 = `${a} and ${b} and ${c} sum to ${sum(s,c)[0]}.`
+    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply(m,c)[0]}.`
+    return[sum(s,c)[0],multiply(m,c)[0],message1,message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
