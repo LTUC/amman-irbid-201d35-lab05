@@ -7,10 +7,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+
 function sum(a, b) {
+    let sum = a + b;
+    let message = `The sum of ${a} and ${b} is ${sum}.`;
+    return [sum,  message]
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -23,10 +27,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let multi = a * b;
+    let message = `The product of ${a} and ${b} is ${multi}.`;
+    return [multi, message]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -40,12 +47,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your code here;
+function sumFunP3(as, bs){
+    let sum = as + bs;
+    return sum;
+}
+function multiFunP3(am, bm) {
+    let multi = am * bm;
+    return multi;
+}
 function sumAndMultiply(a, b, c) {
+    let sum = sumFunP3(sumFunP3(a, b) ,c);
+    let multi = multiFunP3(multiFunP3(a, b), c);
+    let messageSum = `${a} and ${b} and ${c} sum to ${sum}.`;
+    let messageMulti = `The product of ${a} and ${b} and ${c} is ${multi}.`;
+    return [sum, multi, messageSum, messageMulti]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -62,12 +82,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4];
 
+function sumFunP4(as, bs){
+    let sum = as + bs;
+    return sum;
+}
 function sumArray(sumArr) {
+    let sum = sumFunP4(sumFunP4(sumArr[0], sumArr[1]) ,sumArr[2]);
+    let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`
+    return [sum,  message]   
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,11 +109,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+function multiFunP5(am, bm) {
+    let multi = am * bm;
+    return multi;
+}
 function multiplyArray(multArr) {
+    let multi = multiFunP5(multiFunP5(multArr[0], multArr[1]), multArr[2]);
+    let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`
+    return [multi,  message] 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -108,11 +142,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5];
-
+function multiFunP6(am, bm) {
+    let multi = am * bm;
+    return multi;
+}
 function multiplyAnyArray(dynamicArray) {
+    let multi = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+    multi = multiFunP6(dynamicArray[i], multi);
+}
+    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi}.`
+    return [multi,  message]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
