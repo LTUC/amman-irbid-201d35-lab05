@@ -57,11 +57,11 @@ function sumAndMultiply(a, b, c) {
 
     var firstSum = sum(a, b)[0];
     var totalSum = sum(firstSum, c)[0];
-    var firstmul = multiply(a, b)[0];
-    var totalmul = multiply(firstmul, c)[0];
+    var firstmu = multiply(a, b)[0];
+    var totalmu = multiply(firstmu, c)[0];
     var message1 = `${a} and ${b} and ${c} sum to ${totalSum}.`;
-    var msg2 = `The product of ${a} and ${b} and ${c} is ${totalmul}.`;
-    var newArray = [totalSum, totalmul, message1, msg2];
+    var msg2 = `The product of ${a} and ${b} and ${c} is ${totalmu}.`;
+    var newArray = [totalSum, totalmu, message1, msg2];
     return newArray;
 
 }
