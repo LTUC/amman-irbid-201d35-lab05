@@ -35,7 +35,7 @@ function multiply(a, b) {
 testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
+////////////////////////////////////
 /* Problem 3
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
@@ -47,6 +47,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) {
     let sum1 = a+b+c;
     let multi1 = a*b*c;
@@ -74,6 +75,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 let testArray = [2, 3, 4];
 
+
 function sumArray(testArray) {
 
 let sum = 0;
@@ -82,6 +84,7 @@ for(let i =0; i<testArray.length; i++){
 }
 let msg = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`
 return[sum, msg]
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
