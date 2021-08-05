@@ -8,9 +8,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+    let sum = a + b;
+    let result = `The sum of ${a} and ${b} is ${sum}.`
+    return [sum, result];
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -22,8 +25,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
-}
+function multiply(a, b) {}
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -41,8 +43,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) {
-}
+function sumAndMultiply(a, b, c) {}
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -62,8 +63,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4];
 
-function sumArray(sumArr) {
-}
+function sumArray(sumArr) {}
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -82,8 +82,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
-}
+function multiplyArray(multArr) {}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -109,8 +108,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5];
 
-function multiplyAnyArray(dynamicArray) {
-}
+function multiplyAnyArray(dynamicArray) {}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
