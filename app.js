@@ -113,14 +113,18 @@ return[firstElement , secondElement];
   
  // Write your code here
  function multiplyArray(multArr) {
-
+    for(let i = 0 ; i< testArray.length ;i++){
+        let firstElement = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0]
+        let secondElement = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${firstElement}.`
+        //console.log(firstElement ,secondElement);
+     return[firstElement , secondElement];
 
     }
-
+ }
  
   
  // Here is the test for multiplyArray(); uncomment it to run it
- // testMultiplyArray(testArray);
+  testMultiplyArray(testArray);
   
  // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
   
