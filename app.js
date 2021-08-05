@@ -85,20 +85,24 @@ let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
 
-    for (let i = 0; i < testArray.length; i++) {
-        let summ = sum(testArray[0], testArray[1])[0];
-        let fElement = sum(summ, testArray[2])[0];
-        let secondElement = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${fElement} is their sum.`;
-        console.log(fElement, secondElement);
-        return [fElement, secondElement];
+    // for (let i = 0; i < testArray.length; i++) {
+    //     let summ = sum(testArray[0], testArray[1])[0];
+    //     let fElement = sum(summ, testArray[2])[0];
+    //     let secondElement = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${fElement} is their sum.`;
+    //     console.log(fElement, secondElement);
+    //     return [fElement, secondElement];
 
-    }
-
-
-
-
+    // }
+    let sum1 =sum(testArray[0],testArray[1])[0];
+    let sum2 =sum(sum1,testArray[2])[0];
+    let msg= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
+    return [sum2,msg]
 }
-sumArray(testArray);
+
+
+
+
+// sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -117,11 +121,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 function multiplyArray(multArr) {
+    
+    let Rmu1 =multiply(testArray[0],testArray[1])[0];
+        let Rmu =multiply(Rmu1,testArray[2])[0];
+        let msg=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${Rmu}.`
+        return [Rmu,msg]
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
