@@ -50,16 +50,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
 
-    let sum1 = a + b;
-    let sum2 = sum1 + c;
-    let multi1 = a * b;
-    let multi2 = multi1 * c;
+    let sum1 = sum(a,b)[0];
+    let sum2 = sum(sum1,c)[0];
+    let multi1 = multiply(a,b)[0];
+    let multi2 = multiply(multi1,c)[0];
 
-    let mess1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
-    let mess2 = `The product of ${a} and ${b} and ${c} is ${multi2}.`;
-
-
-    return [sum2, multi2, mess1, mess2];
+    let msg1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
+    let msg2 = `The product of ${a} and ${b} and ${c} is ${multi2}.`;
+    
+    return [sum2,multi2,msg1,msg2];
 
 }
 
