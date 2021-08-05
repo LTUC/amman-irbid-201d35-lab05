@@ -116,15 +116,15 @@ function multiplyArray(multArr) {
     //     }
     //     let mess=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${mull}.`
     //     return [mull, mess]
-        // let r1 =multiply(testArray[0],testArray[1])[0];
-        // let r2 =multiply(r1,testArray[2])[0];
-        // let mess=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${r2}.`
-        // return [r2,mess]
+        let r1 =multiply(testArray[0],testArray[1])[0];
+        let r2 =multiply(r1,testArray[2])[0];
+        let mess=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${r2}.`
+        return [r2,mess]
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
