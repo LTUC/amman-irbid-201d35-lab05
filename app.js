@@ -129,6 +129,8 @@ function multiplyArray(multArr) {
     }
     let multArrayMessage = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multArr1}.`
     return [multArr1,multArrayMessage];
+
+    
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
