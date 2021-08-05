@@ -85,18 +85,10 @@ let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
 
-    // for (let i = 0; i < testArray.length; i++) {
-    //     let summ = sum(testArray[0], testArray[1])[0];
-    //     let fElement = sum(summ, testArray[2])[0];
-    //     let secondElement = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${fElement} is their sum.`;
-    //     console.log(fElement, secondElement);
-    //     return [fElement, secondElement];
-
-    // }
-    let sum1 =sum(testArray[0],testArray[1])[0];
-    let sum2 =sum(sum1,testArray[2])[0];
-    let msg= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
-    return [sum2,msg]
+    let s1 =sum(testArray[0],testArray[1])[0];
+    let s2 =sum(s1,testArray[2])[0];
+    let msg= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${s2} is their sum.`;
+    return [s2,msg]
 }
 
 
@@ -123,11 +115,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function multiplyArray(multArr) {
-    
-    let Rmu1 =multiply(testArray[0],testArray[1])[0];
+        let Rmu1 =multiply(testArray[0],testArray[1])[0];
         let Rmu =multiply(Rmu1,testArray[2])[0];
         let msg=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${Rmu}.`
         return [Rmu,msg]
+    
 }
 
 
