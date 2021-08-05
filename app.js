@@ -8,9 +8,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+    let sum = a + b;
+    let message = `The sum of ${a} and ${b} is ${sum}.`;
+    return [sum, message];
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -23,10 +26,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let multi = a * b;
+    let message = `The product of ${a} and ${b} is ${multi}.`;
+    return [multi, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -42,10 +48,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    
+    let sum3 = sum(a, b)[0];
+    sum3 = sum(sum3, c)[0];
+    let multiply3 = multiply(a, b)[0];
+    multiply3 = multiply(multiply3, c)[0];
+    let message3rd = `${a} and ${b} and ${c} sum to ${sum3}.`;
+    let message4th = `The product of ${a} and ${b} and ${c} is ${multiply3}.`;
+    return [sum3, multiply3, message3rd, message4th];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,11 +77,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+    let sum4 = sum(sumArr[0], sumArr[1])[0];
+    sum4 = sum(sum4, sumArr[2])[0];
+    let message5th = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum4} is their sum.`;
+    return [sum4, message5th];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -83,10 +101,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+    let multi5 = multiply(multArr[0], multArr[1])[0];
+    multi5 = multiply(multi5, multArr[2])[0];
+    let message6th = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi5}.`;
+    return [multi5, message6th];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -110,9 +132,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5];
 
 function multiplyAnyArray(dynamicArray) {
+    let multi6 = 1;
+    for (let i = 0; i < dynamicArray.length; i++) {
+        multi6 = multiply(multi6, dynamicArray[i])[0];
+    }
+    let message7th = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi6}.`;
+    return [multi6, message7th];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
