@@ -109,11 +109,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+function multiFunP5(am, bm) {
+    let multi = am * bm;
+    return multi;
+}
 function multiplyArray(multArr) {
+    let multi = multiFunP5(multiFunP5(multArr[0], multArr[1]), multArr[2]);
+    let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`
+    return [multi,  message] 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
