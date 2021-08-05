@@ -8,9 +8,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+    let sum = a + b;
+    let message = `The sum of ${a} and ${b} is ${sum}.`;
+    return [sum, message]
 }
+
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -23,10 +27,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let mu = a * b;
+    let msg = `The product of ${a} and ${b} is ${mu}.`;
+    return [mu, msg];
+
 }
 
+
+
+
+
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -42,10 +54,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+
+    var firstSum = sum(a, b)[0];
+    var totalSum = sum(firstSum, c)[0];
+    var firstmu = multiply(a, b)[0];
+    var totalmu = multiply(firstmu, c)[0];
+    var message1 = `${a} and ${b} and ${c} sum to ${totalSum}.`;
+    var msg2 = `The product of ${a} and ${b} and ${c} is ${totalmu}.`;
+    var newArray = [totalSum, totalmu, message1, msg2];
+    return newArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,11 +84,21 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+
+    let s1 =sum(testArray[0],testArray[1])[0];
+    let s2 =sum(s1,testArray[2])[0];
+    let msg= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${s2} is their sum.`;
+    return [s2,msg]
 }
+
+
+
+
+// sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,11 +113,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 function multiplyArray(multArr) {
+        let Rmu1 =multiply(testArray[0],testArray[1])[0];
+        let Rmu =multiply(Rmu1,testArray[2])[0];
+        let msg=`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${Rmu}.`
+        return [Rmu,msg]
+    
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
