@@ -78,6 +78,7 @@ function sumArray(sumArr) {
     
     for(let i = 0; i<sumArr.length;i++){
         sum = sum + sumArr[i];
+        
     }
     let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`
     return[sum,message]
@@ -135,9 +136,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5];
 
 function multiplyAnyArray(dynamicArray) {
+    let mult=1;
+    
+    for(let i = 0; i<dynamicArray.length;i++){
+        mult = mult* dynamicArray[i];
+    }
+    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${mult}.`
+    return[mult,message]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
