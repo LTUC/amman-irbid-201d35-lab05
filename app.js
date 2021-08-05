@@ -8,6 +8,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+    let sum = a + b;
+    return sum;
 }
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -42,6 +44,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -63,11 +66,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+let sum1 = sum(sumArr[0],sumArr[1]);
+let sum2 = sum(sum1,sumArr[2]);
+let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`
+
+return [sum2,message];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
