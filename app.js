@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
     let sum = a + b;
     let massage = 'The sum of '+a+' and ' +b+' is '+sum+'.' ;
-    console.log(sum);
+    // console.log(sum);
     return [sum,massage];
 }
 // Here is the test for sum(); uncomment it to run it
@@ -76,7 +76,7 @@ return [sum2,message];
 
 }
 
-// Here is the test for sumArray(); uncomment it to run it
+/////////////////// Here is the test for sumArray(); uncomment it to run it
 
  testSumArray(testArray);
 
