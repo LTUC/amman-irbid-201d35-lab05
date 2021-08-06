@@ -125,10 +125,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5];
 
+
 function multiplyAnyArray(dynamicArray) {
+    let count = 1;
+    for (let num = 0; num < dynamicArray.length; num++) {
+
+        count = multiply(count, dynamicArray[num])[0];
+    }
+
+    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${count}.`;
+    return [count, message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
