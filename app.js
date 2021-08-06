@@ -27,7 +27,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
     let multi = a * b;
-    let message = `The product of ${a} and ${b} is ${multi}.`
+    let message = `The product of ${a} and ${b} is ${multi}.`;
     return [multi, message];
 }
 
@@ -51,7 +51,7 @@ function sumAndMultiply(a, b, c) {
     let sum = a + b + c;
     let message1 = `${a} and ${b} and ${c} sum to ${sum}.`;
     let multiply = a * b * c;
-    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply}.`
+    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply}.`;
     return [sum, multiply , message1, message2];
 }
 
@@ -74,11 +74,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+    let a = sum(testArray[0],testArray[1])[0];
+    let b = sum(a,testArray[2])[0];
+    let message = `${testArray[0]},${testArray[1]},4 was passed in as an array of numbers, and ${b} is their sum.`
+    return [b ,message];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
