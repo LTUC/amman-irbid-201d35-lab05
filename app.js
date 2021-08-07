@@ -10,8 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
 
     let sum = a + b;
-    let massage = `The sum of ${a} and ${b} is ${sum}.`;
-    return [sum, MessageChannel];
+    let message = `The sum of ${a} and ${b} is ${sum}.`;
+    return [sum, Message];
 }
 // Here is the test for sum(); uncomment it to run it
  testSum(4, 7);
@@ -27,6 +27,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+
+   
 }
 
 // Here is the test for multiply(); uncomment it to run it
