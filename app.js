@@ -8,10 +8,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-
     let sum = a + b;
     let message = `The sum of ${a} and ${b} is ${sum}.`;
+
     return [sum, message];
+
+     
+
 }
 // Here is the test for sum(); uncomment it to run it
  testSum(4, 7);
@@ -27,9 +30,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+
     let multi = a * b;
     let message = `The product of ${a} and ${b} is ${multi}.`;
     return [multi, message];
+
 
 }
 
