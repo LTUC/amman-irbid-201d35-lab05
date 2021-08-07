@@ -103,6 +103,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 
+
 function sumArray(sumArr) {
  let output = sum(sumArr);
  return output;
@@ -111,6 +112,40 @@ function sumArray(sumArr) {
 // // Here is the test for sumArray(); uncomment it to run it
  var testArraySum= [1,2,3];
  sumArray(testArraySum);
+
+
+
+function sumArray(sumArr) {
+  let output = sum(sumArr);
+  return output;
+ }
+
+// // // Here is the test for sumArray(); uncomment it to run it
+  var testArraySum= [1,2,3];
+  sumArray(testArraySum);
+
+
+
+function sumArray(sumArr) {
+
+  let output = sum(sumArr);
+  return output;
+ }
+
+// // // Here is the test for sumArray(); uncomment it to run it
+  var testArraySum= [1,2,3];
+  sumArray(testArraySum);
+
+//  let output = sum(sumArr);
+//  return output;
+ }
+
+// // // Here is the test for sumArray(); uncomment it to run it
+//  var testArraySum= [1,2,3];
+//  sumArray(testArraySum);
+
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -126,15 +161,35 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+
  	let output = multiply(multArr)
 	return output
+
+
+ 	let output = multiply(multArr);
+ 	return output;
+
+// 	let output = multiply(multArr)
+// 	return output
+
+
 }
 
 
 
 // // Here is the test for multiplyArray(); uncomment it to run it
+
 // var testArrayMul= [1,2,3];
 // multiplyArray(testArrayMul);
+
+
+ var testArrayMul= [1,2,3];
+ multiplyArray(testArrayMul);
+
+// var testArrayMul= [1,2,3];
+// multiplyArray(testArrayMul);
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -158,6 +213,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 
  function multiplyAnyArray(dynamicArray) {
+
  	let output = multiply(dynamicArray);
  	return output;
 }
@@ -165,5 +221,14 @@ Test this function by hand in the console to get it working, and when you think 
 // // Here is the test for multiplyArray(); uncomment it to run it
  var testDynamicArrayMul = [1,2,3,4,5,6,9];
  multiplyAnyArray(testDynamicArrayMul);
+
+// 	let output = multiply(dynamicArray);
+// 	return output;
+}
+
+// // Here is the test for multiplyArray(); uncomment it to run it
+// var testDynamicArrayMul = [1,2,3,4,5,6,9];
+// multiplyAnyArray(testDynamicArrayMul);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
