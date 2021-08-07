@@ -8,9 +8,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+    let sum = a + b;
+    let message = `The sum of ${a} and ${b} is ${sum}.`
+    return [sum,message];
+
 }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -23,10 +27,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let multiply = a * b ;
+    let message = `The product of ${a} and ${b} is ${multiply}.`
+    return [multiply,message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -42,10 +49,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-}
+     let sum1 = sum(a,b)[0];
+    let sum2 = sum(c,sum1)[0];
+    let multiply1 = multiply(a,b)[0];
+    let multiply2 = multiply(c,multiply1)[0];
+    let message = `${a} and ${b} and ${c} sum to ${sum2}.`
+    let massage2 = `The product of ${a} and ${b} and ${c} is ${multiply2}.`
 
+
+   return [sum2,multiply2,message,massage2];     
+}
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+  testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,11 +78,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+  let sum1= sum(testArray[0],testArray[1])[0];
+  let sum2 = sum(testArray[2],sum1)[0];
+  let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
+
+  return [sum2,message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -83,10 +103,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let multi1 = multiply(testArray[0],testArray[1])[0];
+  let multi2 =multiply(testArray[2],multi1)[0];
+  let message = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multi2}.`;
+
+  return[multi2,message];
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -115,4 +141,4 @@ function multiplyAnyArray(dynamicArray) {
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions 
