@@ -108,6 +108,7 @@ function multiplyArray(multArr) {
   let message = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multi2}.`;
 
   return[multi2,message];
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
