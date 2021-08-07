@@ -57,7 +57,7 @@ function sumAndMultiply(a, b, c) {
     let message1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
     let message2 = `The product of ${a} and ${b} and ${c} is ${multi2}.`;
 
-    return [sum2, multi2, message1, message2]
+    return [sum2, multi2, message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -79,11 +79,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+    let sum1= 0;
+    for (let i = 0; i < testArray.length; i++) {
+        sum1 = sum(sum1, testArray[i])[0];
+    }
+    let message = `${testArray} was passed in as an array of numbers, and ${sum1} is their sum.`;
+    return [sum1, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
