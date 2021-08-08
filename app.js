@@ -51,14 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum1 = sum(a, b)[0] + c;
-    let multi1 = multiply(a, b)[0] * c;
-    let sumMessage = `${a} and ${b} and ${c} sum to ${sum1}.`
-    let multiMessage = `The product of ${a} and ${b} and ${c} is ${multi1}.`
+     let sum1 = sum(a, b)[0];
+     let sum2 = sum(sum1,c)[0];
 
-    return [sum1, multi1, sumMessage, multiMessage];
+     let multi1 = multiply(a, b)[0];
+     let multi2 = multiply(multi1,c)[0];
+    let sumMessage = `${a} and ${b} and ${c} sum to ${sum2}.`
+    let multiMessage = `The product of ${a} and ${b} and ${c} is ${multi2}.`
 
+    return [sum2, multi2, sumMessage, multiMessage];
+ 
 
+  
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -89,7 +93,7 @@ function sumArray(sumArr) {
     let sumOfArray = 0;
 
     for (let i = 0; i < testArray.length; i++) {
-        sumOfArray += testArray[i];
+        sumOfArray = sum(sumOfArray,testArray[i])[0];
     }
 
     let arrayMessage = `${testArray } was passed in as an array of numbers, and ${sumOfArray} is their sum.`
@@ -124,13 +128,9 @@ call for the testMultiplyArray() function and see if the test passes.*/
 function multiplyArray(multArr) {
     let multArr1 = 1;
     for (let i = 0; i < testArray.length; i++) {
-        multArr1 *= testArray[i];
+        multArr1 = multiply(multArr1,testArray[i])[0];
 
     }
-
-   
-    
-
     let multArrayMessage = `The numbers ${testArray} have a product of ${multArr1}.`
     return [multArr1,multArrayMessage];
 
@@ -177,7 +177,7 @@ function multiplyAnyArray(dynamicArray) {
 
     let multiplyAny = 1;
     for (let i = 0; i < testDynamicArray.length; i++) {
-        multiplyAny *= testDynamicArray[i];
+        multiplyAny = multiply(multiplyAny,testDynamicArray[i])[0];
     }
     let messageTestDynamicArray = `The numbers ${testDynamicArray} have a product of ${multiplyAny}.`
 return [multiplyAny, messageTestDynamicArray]
