@@ -48,11 +48,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum = a + b + c;
-    let product = a * b * c;
-    let massege1 = `${a} and ${b} and ${c} sum to ${sum}.`
+    let sum1 = sum(sum(a, b)[0],c)[0];
+    let product = multiply(multiply(a,b)[0],c)[0];
+    let massege1 = `${a} and ${b} and ${c} sum to ${sum1}.`
     let massege2 = `The product of ${a} and ${b} and ${c} is ${product}.`
-    return[sum, product, massege1 , massege2];
+    return[sum1, product, massege1 , massege2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
