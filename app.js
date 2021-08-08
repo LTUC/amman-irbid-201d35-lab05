@@ -48,20 +48,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here;
-function sumFunP3(as, bs){
-    let sum = as + bs;
-    return sum;
-}
-function multiFunP3(am, bm) {
-    let multi = am * bm;
-    return multi;
-}
+
 function sumAndMultiply(a, b, c) {
-    let sum = sumFunP3(sumFunP3(a, b) ,c);
-    let multi = multiFunP3(multiFunP3(a, b), c);
-    let messageSum = `${a} and ${b} and ${c} sum to ${sum}.`;
-    let messageMulti = `The product of ${a} and ${b} and ${c} is ${multi}.`;
-    return [sum, multi, messageSum, messageMulti]
+    let sum3 = sum(sum(a, b)[0] ,c)[0];
+    let multi3 = multiply(multiply(a, b)[0], c)[0];
+    let messageSum = `${a} and ${b} and ${c} sum to ${sum3}.`;
+    let messageMulti = `The product of ${a} and ${b} and ${c} is ${multi3}.`;
+    return [sum3, multi3, messageSum, messageMulti]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -80,16 +73,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+
 let testArray = [2, 3, 4];
 
-function sumFunP4(as, bs){
-    let sum = as + bs;
-    return sum;
-}
 function sumArray(sumArr) {
-    let sum = sumFunP4(sumFunP4(sumArr[0], sumArr[1]) ,sumArr[2]);
-    let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`
-    return [sum,  message]   
+    let sum4 = sum(sum(sumArr[0], sumArr[1])[0] ,sumArr[2])[0];
+    let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum4} is their sum.`
+    return [sum4,  message]   
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -109,14 +99,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiFunP5(am, bm) {
-    let multi = am * bm;
-    return multi;
-}
+
 function multiplyArray(multArr) {
-    let multi = multiFunP5(multiFunP5(multArr[0], multArr[1]), multArr[2]);
-    let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`
-    return [multi,  message] 
+    let multi5 = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi5}.`
+    return [multi5,  message] 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -141,18 +128,16 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+
 let testDynamicArray = [1, 2, 3, 4, 5];
-function multiFunP6(am, bm) {
-    let multi = am * bm;
-    return multi;
-}
+
 function multiplyAnyArray(dynamicArray) {
-    let multi = 1;
+    let multi6 = 1;
     for (let i = 0; i < dynamicArray.length; i++) {
-    multi = multiFunP6(dynamicArray[i], multi);
-}
-    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi}.`
-    return [multi,  message]
+        multi6 = multiply(dynamicArray[i], multi6)[0];
+    }
+    let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${multi6}.`
+    return [multi6,  message]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
