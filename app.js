@@ -9,12 +9,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
     let sum = a + b;
+
     let message = `The sum of ${a} and ${b} is ${sum}.`;
 
     return [sum , message];
-}
+ }
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+  testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -50,18 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum = a + b + c;
-    let multiply = a * b * c;
+    let sum1 = sum(sum(a, b)[0],c)[0];
+    let multiply1 = multiply(multiply(a, b)[0],c)[0];
 
-    let message1 = `${a} and ${b} and ${c} sum to ${sum}.`;
-    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply}.`;
+    let message1 = `${a} and ${b} and ${c} sum to ${sum1}.`;
+    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply1}.`;
 
-    return[sum, multiply, message1, message2]
+    return[sum1, multiply1, message1, message2]
 
 }
 
-// Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+//  Here is the test for sumAndMultiply(); uncomment it to run it
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
