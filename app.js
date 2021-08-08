@@ -76,8 +76,8 @@ let testArray = [2, 3, 4];
 function sumArray(sumArr) {
    let Arraysum = 0;
     for(let i =0; i < testArray.length ; i++){
-         Arraysum += testArray[i];
-        
+          Arraysum= sum(sum(testArray[0], testArray[1])[0],testArray[2])[0];
+       
         }
     
     let massege = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${Arraysum} is their sum.`
