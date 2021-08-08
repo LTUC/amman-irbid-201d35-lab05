@@ -104,7 +104,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {
     let multiArray = 1;
     for(let i =0; i < testArray.length ; i++){
-        multiArray *= testArray[i];
+     
+      multiArray= multiply(multiply(testArray[0], testArray[1])[0],testArray[2])[0];
         
         }
         let massege = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multiArray}.`
