@@ -48,11 +48,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    let sum = a + b + c;
-    let multi = a * b * c;
-    let message1 = `${a} and ${b} and ${c} sum to ${sum}.`;
-    let message2 = `The product of ${a} and ${b} and ${c} is ${multi}.`
-    return [sum, multi, message1, message2];
+    let aSum = sum(sum(a, b)[0], c)[0];
+    let aMulti = multiply(multiply(a, b)[0], c)[0];
+    let message1 = `${a} and ${b} and ${c} sum to ${aSum}.`;
+    let message2 = `The product of ${a} and ${b} and ${c} is ${aMulti}.`
+    return [aSum, aMulti, message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,13 +74,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-    let sum = 0;
+    let aSum = 0;
     for(let i = 0; i < sumArr.length; i++)
     {
-        sum += sumArr[i];
+        aSum = sum(aSum, sumArr[i])[0];
     }
-    let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum} is their sum.`
-    return [sum, message];
+    let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${aSum} is their sum.`
+    return [aSum, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -104,7 +104,7 @@ function multiplyArray(multArr) {
     let multi = 1;
     for(let i = 0; i < multArr.length; i++)
     {
-        multi *= multArr[i];
+        multi = multiply(multi, multArr[i])[0];
     }
     let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`;
     return [multi, message];
@@ -138,7 +138,7 @@ function multiplyAnyArray(dynamicArray) {
     let multi = 1;
     for(let i = 0; i < dynamicArray.length; i++)
     {
-        multi *= dynamicArray[i];
+        multi = multiply(multi, dynamicArray[i])[0];
     }
     let text = dynamicArray.toString();
     let message = `The numbers ${text} have a product of ${multi}.`;
