@@ -28,7 +28,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
     let multi = a*b;
     let msg = `The product of ${a} and ${b} is ${multi}.`
-    return [multi , msg]
+    let arr =  [multi , msg]
+    return arr;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -49,8 +50,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function sumAndMultiply(a, b, c) {
-    let sum1 = a+b+c;
-    let multi1 = a*b*c;
+    let sum1 = sum(sum(a, b)[0], c)[0];
+    let multi1 = multiply(multiply(a,b)[0],c)[0];
     let msg1 = `${a} and ${b} and ${c} sum to ${sum1}.`
     let msg2 = `The product of ${a} and ${b} and ${c} is ${multi1}.`
 return [sum1,multi1,msg1,msg2]
@@ -104,15 +105,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray1 = [2, 3, 4];
-function multiplyArray(testArray1) {
+function multiplyArray(multArr) {
     let multi = 1;
-for(let i =0; i<testArray.length; i++){
-    multi =multi*testArray[i];
+    for(let i = 0; i < multArr.length; i++)
+    {
+        multi = multiply(multi, multArr[i])[0];
+    }
+    let msg = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi}.`;
+    return [multi, msg];
 }
-let msg = `The numbers ${testArray1[0]},${testArray1[1]},${testArray1[2]} have a product of ${multi}.`
-return[multi,msg]
-}
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
   testMultiplyArray(testArray);
