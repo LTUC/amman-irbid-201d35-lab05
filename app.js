@@ -43,13 +43,17 @@ function multiply(a, b) {
     return [multi, message];
 }
 
+
+
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
+
 
         let multi = a * b;
         let message = `The product of ${a} and ${b} is ${multi}.`;
         return [multi, message];
     }
+
 
 // Here is the test for multiply(); uncomment it to run it
 
@@ -95,6 +99,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2,3,4];
 
+
+  /*function sumArray(sumArr) {
+  let sumofarr = testArray[0] + testArray[1] + testArray[2] ;
+  let message =`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumofarr} is their sum.`
+  console.log(sumofarr);
+  
   function sumArray(sumArr) {
 
   let sumofarr = sum (testArray[0] , sum( testArray[1] , testArray[2])[0])[0];
@@ -102,7 +112,7 @@ let testArray = [2,3,4];
   
   return [sumofarr , message]
 
-}
+}/*
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
@@ -120,9 +130,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-    let multofarr = testArray[0] * testArray[1] * testArray[2] ;
-    let message =`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multofarr}.`
-    return [multofarr , message]
+    
+    let multi = multiply( testArray[0] , multiply(testArray[1] , testArray[2])[0])[0];
+    let message =`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multi}.`
+    return [multi , message]
 }
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
