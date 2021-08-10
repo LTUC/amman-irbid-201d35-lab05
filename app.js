@@ -111,16 +111,15 @@ Test this function by hand in the console to get it working, and when you think 
 let Array1 = [2, 3, 4]; 
 
 function multiplyArray(multArr){
-    let multiply = 1;
+    let arrMultiply = 1;
 
     for(let i = 0; i < Array1.length; i++){
- 
-        multiply *= Array1[i];
+        arrMultiply = multiply(multiply(Array1[0], Array1[1])[0], Array1[2])[0];
     }
 
-    let message = `The numbers ${Array1[0]},${Array1[1]},${Array1[2]} have a product of ${multiply}.`
+    let message = `The numbers ${Array1[0]},${Array1[1]},${Array1[2]} have a product of ${arrMultiply}.`
 
-    return[multiply , message];
+    return[arrMultiply , message];
     
  
 }
