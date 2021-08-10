@@ -8,9 +8,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-}
+    let sum = a + b;
+
+    let message = `The sum of ${a} and ${b} is ${sum}.`;
+
+    return [sum , message];
+ }
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+  testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -23,10 +28,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    let multiply = a * b;
+    let message = `The product of ${a} and ${b} is ${multiply}.`;
+
+    return [multiply, message]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9); 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -42,10 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    let sum1 = sum(sum(a, b)[0],c)[0];
+    let multiply1 = multiply(multiply(a, b)[0],c)[0];
+
+    let message1 = `${a} and ${b} and ${c} sum to ${sum1}.`;
+    let message2 = `The product of ${a} and ${b} and ${c} is ${multiply1}.`;
+
+    return[sum1, multiply1, message1, message2]
+
 }
 
-// Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//  Here is the test for sumAndMultiply(); uncomment it to run it
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,11 +80,20 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
+   let sum = 0;
+
+   for(let i =0; i < sumArr.length; i++){
+
+       sum += testArray[i];
+   }
+
+   let massege = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`;
+   return[sum, massege];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,11 +108,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+let Array1 = [2, 3, 4]; 
+
+function multiplyArray(multArr){
+    let multiply = 1;
+
+    for(let i = 0; i < Array1.length; i++){
+ 
+        multiply *= Array1[i];
+    }
+
+    let message = `The numbers ${Array1[0]},${Array1[1]},${Array1[2]} have a product of ${multiply}.`
+
+    return[multiply , message];
+    
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(Array1);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -110,9 +150,20 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5];
 
 function multiplyAnyArray(dynamicArray) {
+    let multiply1 = 1;
+
+    for(let i = 0; i < testDynamicArray.length; i++){
+ 
+        multiply1 *= testDynamicArray[i];
+    }
+    let message = `The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${multiply1}.`
+
+    return[multiply1, message];
+
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
