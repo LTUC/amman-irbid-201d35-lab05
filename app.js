@@ -8,21 +8,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-function sum(a, b) { 
-
 function sum(a, b) {
 
   let sum = a + b;
   let massage = `The sum of ${a} and ${b} is ${sum}.`; 
   return [sum, massage];
-
-
-    let sum = a + b;
-    let massage = `The sum of ${a} and ${b} is ${sum}.`; 
-    return [sum, massage];
-
 }
-
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -46,17 +37,6 @@ function multiply(a, b) {
 
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
-
-
-        let multi = a * b;
-        let message = `The product of ${a} and ${b} is ${multi}.`;
-        return [multi, message];
-    }
-
-
-// Here is the test for multiply(); uncomment it to run it
-
 testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -100,19 +80,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2,3,4];
 
 
-  /*function sumArray(sumArr) {
+  function sumArray(sumArr) {
   let sumofarr = testArray[0] + testArray[1] + testArray[2] ;
   let message =`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumofarr} is their sum.`
-  console.log(sumofarr);
-  
-  function sumArray(sumArr) {
-
-  let sumofarr = sum (testArray[0] , sum( testArray[1] , testArray[2])[0])[0];
-  let message =`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumofarr} is their sum.`;
   
   return [sumofarr , message]
 
-}/*
+}
+
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
@@ -158,7 +133,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5];
-
 
 function multiplyAnyArray(dynamicArray) {
     let count = 1;
