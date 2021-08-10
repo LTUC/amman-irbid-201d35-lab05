@@ -8,6 +8,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+  let sum = a + b;
+  let massage = `The sum of ${a} and ${b} is ${sum}.`; 
+  return [sum, massage];
 }
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -63,9 +66,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2,3,4];
 
   function sumArray(sumArr) {
-  let sumofarr = testArray[0] + testArray[1] + testArray[2] ;
-  let message =`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumofarr} is their sum.`
-  console.log(sumofarr);
+
+  let sumofarr = sum (testArray[0] , sum( testArray[1] , testArray[2])[0])[0];
+  let message =`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumofarr} is their sum.`;
+  
   return [sumofarr , message]
 
 }
