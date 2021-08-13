@@ -44,7 +44,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    return [a+b+c, a*b*c, `${a} and ${b} and ${c} sum to ${a+b+c}.`, `The product of ${a} and ${b} and ${c} is ${a*b*c}.`];
+    // return [a+b+c, a*b*c, `${a} and ${b} and ${c} sum to ${a+b+c}.`, `The product of ${a} and ${b} and ${c} is ${a*b*c}.`];
+    return [sum(a,sum(b,c)[0])[0],multiply(a,multiply(b,c)[0])[0] , `${a} and ${b} and ${c} sum to ${a+b+c}.`, `The product of ${a} and ${b} and ${c} is ${a*b*c}.`];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
