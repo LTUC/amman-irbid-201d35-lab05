@@ -89,14 +89,9 @@ let testArray = [2, 3, 4];
 
 
 function sumArray(sumArr) {
-    let sum = 0;
-
-for (let i = 0; i < testArray.length; i++) {
-    sum += testArray[i];
-}
-let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`
-
-return [sum, message];
+    let totalSum = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0] ;
+    let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`;
+    return [totalSum,message]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
